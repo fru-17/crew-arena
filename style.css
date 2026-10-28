@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.task-form input:focus {
+  outline: none;
+  border-color: #764ba2;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  background: #764ba2;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: #5b3a82;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.task-item label {
+  flex: 1;
+  cursor: pointer;
+  word-break: break-word;
+}
+
+.task-item.done label {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.task-item .delete-btn {
+  background: transparent;
+  color: #dc2626;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
+}
+
+.task-item .delete-btn:hover,
+.task-item .delete-btn:focus-visible {
+  background: #fee2e2;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #6b7280;
+  margin: 1rem 0 0;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.task-footer button {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.task-footer button:hover,
+.task-footer button:focus-visible {
+  background: #d1d5db;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
